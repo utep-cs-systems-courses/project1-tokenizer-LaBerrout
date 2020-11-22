@@ -26,3 +26,31 @@ char word_start(char *str)
   temp = str[i+1];
   return temp;
 }
+
+char *word_terminator(char *word)
+{
+  char *temp;
+  while(non_space_char(*word)){
+    word++;
+    }
+  temp = word;
+  return temp;
+}
+
+int count_words(char *str)
+{
+  int i=0;
+  int count=0;
+
+  if(str[0] != '\0'){
+    count++;
+  }
+  while(str[i] != '\0'){
+    if(space_char(str[i])){
+	count++;
+    }
+    ++i;
+  }
+  return count;
+}
+

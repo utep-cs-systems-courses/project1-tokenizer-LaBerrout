@@ -10,8 +10,8 @@ int main()
 {
   puts("Welcome!");
   int c = 0;
-  char s[30] = "Hello World!";             //Limit of 19 characters, HARDCORED FOR TESTS
-  char *sptr = (char *) malloc(31);  //THEN WE NEED TO COPY THE STRING
+  char s[50] = "Hello World!";             //Limit of 19 characters, HARDCORED FOR TESTS
+  char *sptr = (char *) malloc(sizeof(s)+1);  //THEN WE NEED TO COPY THE STRING
   sptr = &s[0];
 
   while (1){                               //Infinite while loop
@@ -37,9 +37,9 @@ int main()
 
       
       printf("Your string is: %c\n",sptr[0]);
-      printf("Start address of new word: %p\n", word_start(sptr));
-      printf("Char in the address: %c\n", word_start(sptr));
-      
+      //printf("Start address of new word: %p\n", word_terminator(&sptr[0]));
+      //printf("Last char of the word: %c\n", *(word_terminator(&sptr[0])-1));
+      printf("Words in the string: %d", count_words(sptr));
       //puts(s);                             // displays string
       //printf("%s\n",s);                      //TEST: PRINT HARDCORED STRING
 
