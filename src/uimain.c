@@ -36,10 +36,9 @@ int main()
       /* Use the functions from the tokenizer */
 
       
-      printf("Your string is: %c\n",sptr[1]);
-      for (int i=0; i<sizeof(s);i++){
-	printf("Is char %c whitespace? %d\n", sptr[i], space_char(sptr[i]));
-      }
+      printf("Your string is: %c\n",sptr[0]);
+      printf("Start address of new word: %p\n", word_start(sptr));
+      printf("Char in the address: %c\n", word_start(sptr));
       
       //puts(s);                             // displays string
       //printf("%s\n",s);                      //TEST: PRINT HARDCORED STRING
