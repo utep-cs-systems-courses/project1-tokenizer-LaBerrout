@@ -1,14 +1,17 @@
 # tokenizer Makefile #
-
-# Objects 
-OBJS = uimain.c
+CFLAGS=-g -O3
 
 # First target is built by default. Usually named "all"
 all: tokens
 
-# tokenizer_out (target)
-tokens: $(OBJS)
-	cc -o tokens $(OBJS)
+# file dependencies
+uimain.o: uimain.c
+tokenizer.o: tokenizer.h
+#history.o: history.h
+
+# tokenizer_out (target)  ADD history.o ONCE HAVE history.c, and also above ^^^
+tokens: uimain.o tokenizer.o
+	cc -o $@ $^ $(CFLAGS)
 
 run: tokens
 	./tokens
