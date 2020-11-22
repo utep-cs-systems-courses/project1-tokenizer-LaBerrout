@@ -27,9 +27,11 @@ int main()
       break;
 
     case 'b':
-      printf("Select a string:\n");
-      /* LINKED LIST*/
-
+      char str[];
+      printf("Select a string:")
+      printf("  1. The cake is a lie!\n");
+      printf("  2. But it was delicious\n");
+      printf("  3. True");
       
       break;
 
