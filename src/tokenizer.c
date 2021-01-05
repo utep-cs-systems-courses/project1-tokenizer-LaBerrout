@@ -54,3 +54,9 @@ int count_words(char *str)
   return count;
 }
 
+char *copy_str(char *inStr, short len)
+{
+  char *temp;
+  return temp;
+}
+
