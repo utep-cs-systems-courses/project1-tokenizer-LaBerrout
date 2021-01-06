@@ -17,8 +17,10 @@ void test_copy_str();
 
 void test_tokenize();
 
-void print_tokens();
+void test_print_tokens();
 
-void free_tokens();
+void test_free_tokens();
+
+void test_all();
 
 #endif
