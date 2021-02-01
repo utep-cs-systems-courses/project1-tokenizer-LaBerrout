@@ -40,8 +40,8 @@ int main()
       */
       printf("Testing:\n");
 
-      test_all();
-      
+      List *list = init_history();
+      add_history(list,sptr);
       
     
       break;
@@ -49,6 +49,7 @@ int main()
     case 'b':
       printf("Select a string:\n");
       /* LINKED LIST*/
+      printf("History: %s\n",get_history(list,2));
 
       printf("\n");
       break;

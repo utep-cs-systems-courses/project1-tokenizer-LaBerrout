@@ -11,7 +11,7 @@ tester2.o: tester2.h
 #history.o: history.h
 
 # tokenizer_out (target)  ADD history.o ONCE HAVE history.c, and also above ^^^
-tokens: uimain.o tokenizer.o tester2.o
+tokens: uimain.o tokenizer.o history.o tester2.o
 	cc -o $@ $^ $(CFLAGS)
 
 run: tokens

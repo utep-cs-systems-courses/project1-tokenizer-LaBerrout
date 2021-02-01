@@ -67,7 +67,7 @@ void test_count_words()
   char str[50] = "High hopes for a living";
   printf("String = %s\n", str);
   char *p = (char *)malloc(sizeof(str));
-
+   
   int i=0;
   while(str[i]!='\0'){
     p[i]=str[i];
@@ -80,23 +80,51 @@ void test_count_words()
 
 void test_copy_str()
 {
-  printf("\ncopy_str pending...\n");
+  
+  char str[50] = "High hopes";
+  char *p = (char *)malloc(sizeof(str));
+  int i=0;
+  while(str[i]!='\0'){
+    p[i] = str[i];
+    i++;
+  }
+  short len = 3;
+  char *pstr = (char *)malloc(sizeof(len));
+  
+  pstr = copy_str(p,len);
+  printf("Copy string:\n");
 
-  /*
-  char[] str = "High hopes";
-  printf("copy str:",copy_str(str,50));
-  */
+  for(int i=0; i<=len; i++){
+    printf("%c\n",pstr[i]);
+  }
+
+  printf("\n");
   
 }
 
 void test_tokenize()
 {
-  printf("tokenize pending...\n");
+  char str[50] = "High hopes for a living";
+  char *p = (char *)malloc(sizeof(str));
+  int i=0;
+  while(str[i]!='\0'){
+    p[i] = str[i];
+    i++;
+  }
+
+  tokenize(p);
 }
 
 void test_print_tokens()
 {
-  printf("print tokens pending...\n");
+  char *str = "high hopes";
+  
+  char **pt = tokenize(str);
+  //printf("address tokenize: %p\n",tokenize(str));
+  printf("string pt: %s\n", (tokenize(str))[0]);
+  //printf("toskens[0] = %s\n",pt[0]);
+  print_tokens(pt);
+
 }
 
 void test_free_tokens()
@@ -110,9 +138,9 @@ void test_all()
   //test_non_space_char();
   //test_word_start();
   //test_word_terminator();
-  test_count_words();
-  test_copy_str();
-  test_tokenize();
+  //test_count_words();
+  //test_copy_str();
+  //test_tokenize();
   test_print_tokens();
   test_free_tokens();
 }
