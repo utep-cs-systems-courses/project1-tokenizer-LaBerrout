@@ -48,6 +48,7 @@ char *get_history(List *list, int id)
     }
   }
   printf("There's no history with this ID, try again.\n");
+  
   return NULL;
 
 
